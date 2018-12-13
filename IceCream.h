@@ -7,6 +7,7 @@ class IceCream
 {
 
 public:
+	
 	IceCream();
 	IceCream(string userName, string userIngredients, float userPrice);
 	void newFlavor();
@@ -19,15 +20,11 @@ private:
 	string ingredients[100];
 	float prices[100];
 	string season;
-	string flavorName;
-	string flavorIngredients;
-	float flavorPrice;
-	int index = 0;
-	string userName;
-	
-	string userName;
+	string userName;	
 	string userIngredients;
+	int index = 0;
 	float userPrice;
+	bool found = false;
 };
 
 //have different seasons, program gives you an option to set a season, which will yield unique seasonal flavors

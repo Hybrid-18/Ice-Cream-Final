@@ -9,13 +9,14 @@ IceCream::IceCream()
 	flavorIngredients = " - ";
 }
 IceCream::IceCream(string userName, string userIngredients, float userPrice) {
-	index = index + 1;
 	flavors[index] = userName;
 	prices[index] = userPrice;
 	ingredients[index] = userIngredients;
 	return;
 }
 void IceCream::newFlavor() {
+
+	index = index + 1;
 	cin.ignore;
 	cout << endl;
 	cout << "Enter new flavor name: ";
@@ -30,24 +31,43 @@ void IceCream::newFlavor() {
 
 }
 void IceCream::changePrice(float userPrice) {
-	flavors[index] = userPrice;
+	cout << "Enter flavor name: ";
+	cin >> userName;
+	while (found == false) {
+		for (int i = 0; i < index; i++) {
+			if (flavors[i] == userName) {
+				found = true;
+			}
+		}
+	}
+	found = false;
+	cout << "Enter a new flavor price: ";
+	cin >> userPrice;
+	prices[index] = userPrice;
 	return;
 }
 void IceCream::changeIngredients(string userIngredients) {
+	cout << "Enter flavor name: ";
+	cin >> userName;
+	while (found == false) {
+		for (int i = 0; i < index; i++) {
+			if (flavors[i] == userName) {
+				found = true;
+			}
+		}
+	}
+	found = false;
+	cout << "Enter new ingredient listing for the flavor: ";
+	cin.ignore;
+	getline(cin, userIngredients);
 	ingredients[index] = userIngredients;
 	return;
 }
 float IceCream::showPrice() const {
-	cout << "Enter flavor name:	"; 
-	cin >> userName;
-	while (flavors[index] != userName) {
-		for (int i = 0; i < index; ++i) {
-
-		}
-	}
+	return prices[index];
 }
 string IceCream::showIngredients() const {
-	return flavorIngredients;
+	return ingredients[index];
 }
 
 
