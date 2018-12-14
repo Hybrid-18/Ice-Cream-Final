@@ -26,7 +26,7 @@ void IceCream::newFlavor() {
 	getline(cin, userIngredients);
 	cout << "Enter flavor price: ";
 	cin >> userPrice;
-	IceCream flavors[index](string userName, string userIngredients, float userPrice);
+	IceCream flavors1(string userName, string userIngredients, float userPrice);
 	return;
 
 }

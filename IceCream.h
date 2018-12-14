@@ -5,7 +5,6 @@ using namespace std;
 
 class IceCream
 {
-
 public:
 	
 	IceCream();
