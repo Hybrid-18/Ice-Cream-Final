@@ -4,9 +4,9 @@
 
 IceCream::IceCream()
 {
-	flavorName = " - ";
-	flavorPrice = 0.00;
-	flavorIngredients = " - ";
+	flavors[index] = " - ";
+	prices[index] = 0.00;
+	ingredients[index] = " - ";
 }
 IceCream::IceCream(string userName, string userIngredients, float userPrice) {
 	flavors[index] = userName;
