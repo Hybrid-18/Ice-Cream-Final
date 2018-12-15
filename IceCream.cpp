@@ -63,6 +63,18 @@ void IceCream::changeIngredients(string userIngredients) {
 	ingredients[index] = userIngredients;
 	return;
 }
+void IceCream::addStock() {
+	while (found == false) {
+		for (int i = 0; i < index; i++) {
+			if (flavors[i] == userName) {
+				found = true;
+			}
+		}
+	}
+	found = false;
+	stock[i] = stock[i] + batch;
+	return;
+}
 float IceCream::showPrice() const {
 	return prices[index];
 }

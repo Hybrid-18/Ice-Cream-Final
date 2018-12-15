@@ -12,16 +12,18 @@ public:
 	void newFlavor();
 	void changePrice(float userPrice);
 	void changeIngredients(string userIngredients);
+	void addStock();
 	float showPrice() const;
 	string showIngredients() const;
 private:
 	string flavors[100];
 	string ingredients[100];
 	float prices[100];
+	int stock[100];
 	string season;
 	string userName;	
 	string userIngredients;
-	int index = 0;
+	int index = 0; //only gets changed when a flavor and it's information is added
 	float userPrice;
 	bool found = false;
 };
