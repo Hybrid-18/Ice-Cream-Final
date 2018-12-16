@@ -1,31 +1,35 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class IceCream
 {
 public:
 	
-	IceCream();
-	IceCream(string userName, string userIngredients, float userPrice);
+	IceCream();// default constructor
+	IceCream(string userName, string userIngredients, float userPrice, int index); //overload constructor
 	void newFlavor();
 	void changePrice(float userPrice);
 	void changeIngredients(string userIngredients);
 	void addStock();
-	float showPrice() const;
-	string showIngredients() const;
+	float showPrice();
+	string showIngredients();
 private:
-	string flavors[100];
-	string ingredients[100];
-	float prices[100];
-	int stock[100];
+	vector <string> flavors;
+	vector <string> ingredients;
+	vector <float> prices;
+	vector <int> stock[100];
+	int batch;
+	int i;
 	string season;
 	string userName;	
 	string userIngredients;
 	int index = 0; //only gets changed when a flavor and it's information is added
 	float userPrice;
-	bool found = false;
+	bool found = false; 
 };
 
 //have different seasons, program gives you an option to set a season, which will yield unique seasonal flavors
